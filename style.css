@@ -1,7 +1,7 @@
 .admin-dashboard {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 240px 1fr;
+  grid-template-columns: 260px 1fr;
   font-family: "Roboto";
   grid-template-areas: 
   "sidebar header"
@@ -58,12 +58,57 @@
 /* header */
 .header {
   grid-area: header;
+  padding: 16px 32px;
 }
 
 .header__svg {
   min-width: 20px;
   height: 20px;
+  justify-self: center;
 }
+
+.header__actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+}
+
+.header__searchbar {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__searchbar-input {
+  outline: none;
+  border: none;
+  background-color: var(--secondary);
+  border-radius: 1rem;
+}
+
+.header__meta {
+  display: grid;
+  grid-template-columns: 24px 64px 160px;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__avatar {
+  background-color: goldenrod;
+  width: 48px;
+  min-height: 48px;
+  border-radius: 50%;
+  justify-self: center;
+}
+
+.header__username {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+
 
 .dashboard {
   grid-area: dashboard;
