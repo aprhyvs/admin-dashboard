@@ -2,6 +2,7 @@
   min-height: 100vh;
   display: grid;
   grid-template-columns: 260px 1fr;
+  grid-template-rows: 160px 1fr;
   font-family: "Roboto";
   grid-template-areas: 
   "sidebar header"
@@ -57,8 +58,10 @@
 
 /* header */
 .header {
+  display: grid;
   grid-area: header;
   padding: 16px 32px;
+  gap: 16px;
 }
 
 .header__svg {
@@ -69,8 +72,28 @@
 
 .header__actions {
   display: grid;
+}
+
+.header__action {
+  height: fit-content;
+  padding: 0.5rem 0; 
+  background-color: var(--sidebar-bg-color);
+  color: var(--sidebar-text-color);
+  border: none;
+  width: 100%;
+  border-radius: 2rem;
+}
+
+.header__actions--top {
   grid-template-columns: 2fr 1fr;
   gap: 32px;
+}
+
+.header__actions--bottom {
+  grid-template-columns: repeat(3, 96px);
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
 }
 
 .header__searchbar {
@@ -87,7 +110,7 @@
   border-radius: 1rem;
 }
 
-.header__meta {
+.header__profile {
   display: grid;
   grid-template-columns: 24px 64px 160px;
   gap: 16px;
@@ -103,10 +126,32 @@
   justify-self: center;
 }
 
+.header__avatar--big {
+  width: 100%;
+}
+
 .header__username {
   font-weight: 700;
   font-size: 16px;
 }
+
+.header__body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.greet {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 16px;
+}
+
+.greet__text,
+.greet__username {
+  font-weight: 800;
+}
+
+
 
 
 
