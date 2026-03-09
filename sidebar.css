@@ -8,6 +8,7 @@
   color: var(--sidebar-text-color);
   padding: 1rem 0;
   z-index: 3;
+  box-shadow: 1px 0 8px 0 #00000060;
 }
 
 .sidebar__title,
